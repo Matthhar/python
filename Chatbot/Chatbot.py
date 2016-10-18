@@ -15,5 +15,10 @@ condition = raw_input("How are you feeling today? ")
 print("You are feeling "+ condition + " today")
 
 location = raw_input("Where are you? ")
-weather = raw_input("What's the weather like in " + location +"? ")
-print("So, It's a " + weather + " day in " + location)
+
+location2 = location.lower()
+location3 = location2.capwords()
+print(location3)
+
+weather = raw_input("What's the weather like in " + location3 +"? ")
+print("So, It's a " + weather + " day in " + location3)
