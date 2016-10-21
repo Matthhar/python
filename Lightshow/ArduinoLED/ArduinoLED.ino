@@ -3,9 +3,11 @@ void setup()
   Serial.begin(9600);
   pinMode(13, OUTPUT);
 }
+/// Setup the serial to read and the pin for output
 
 void loop()
 {
+  ///  If statements to read the input received and then to respond accordingly
   if (Serial.available() > 0) {
     char value = Serial.read();
     Serial.print("You just sent me: ");

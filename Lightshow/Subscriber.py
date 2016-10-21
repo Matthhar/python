@@ -12,10 +12,10 @@ def messageReceived(broker,obj,msg):
         payload = "0"
     
     board.write(payload.encode())
+    
+# Function to read the information received from Simon, change it and then output it to the board
 
-
-# FULL DEVICE NAME can be found by running: python PortScanner.py
-# SPEED is usually 115200 for Microbit and 9600 for Arduino
+# set the board location and then the variables for subscribing to Simon's output
 board = Serial("/dev/cu.usbmodem1431",9600,timeout=2)
 
 randomID = random()
@@ -25,4 +25,3 @@ client.subscribe("/lights")
 client.on_message = messageReceived
 while (True): client.loop()
 
-# The rest of your code goes in here !!!
