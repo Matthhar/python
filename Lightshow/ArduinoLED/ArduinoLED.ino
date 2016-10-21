@@ -11,16 +11,16 @@ void loop()
     Serial.print("You just sent me: ");
     Serial.write(value);
     Serial.print("\n");
-    if (value == "ON"){
+    if (value == 1){
      digitalWrite(13, HIGH);
-     delay(1000); 
+     delay(2000); 
     }
-    if (value == "OFF"){
+    if (value == 0){
      digitalWrite(13, LOW);
-     delay(1000); 
+     delay(2000); 
     }
   }
-  else
+ else
   {
     digitalWrite(13, LOW);
   }

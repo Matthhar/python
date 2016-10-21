@@ -6,6 +6,12 @@ def messageReceived(broker,obj,msg):
     global client
     payload = msg.payload.decode()
     print("Message " + msg.topic + "containing: " + payload)
+    if (payload == "ON"):
+        payload = "1"
+    else:
+        payload = "0"
+    
+    board.write(payload.encode())
 
 
 # FULL DEVICE NAME can be found by running: python PortScanner.py
