@@ -1,5 +1,6 @@
 from graphics import *
 from time import *
+from random import randint
 
 data = [52, 47, 57, 49, 59, 62, 44, 76, 52, 52, 44, 59, 59, 79, 59, 42, 57, 48, 80, 43, 72, 74, 59, 44, 57, 55, 49, 54, 54]
 
@@ -32,13 +33,13 @@ while True:
         xspeed = 25
     for change in data: 
         if colourchange == 1:
-            r = r + change
+            r = r + (change*randint(1,2))
             colourchange = colourchange + 1
         if colourchange == 2:
-            g = g + change
+            g = g + (change*randint(1,2))
             colourchange = colourchange + 1
         if colourchange == 3:
-            b = b + change
+            b = b + (change*randint(1,2))
             colourchange = 1
  
     
