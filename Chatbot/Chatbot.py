@@ -49,3 +49,18 @@ for wfound in weather3:
 
 print("So, It's a " + wfound + " day in " + place2)
 #code to find out how the weather is where you are
+
+colour = raw_input("What's your favourite colour? ")
+colour2 = colour.lower()
+colour3 = colour2.split(" ")
+
+for favourite in colour3:
+    if favourite in stopwords: continue
+    else: break
+
+if favourite == "blue":
+    print("No way! Blue is my favourite colour also!")
+else:
+    favourite2 = favourite.capitalize()
+    print(favourite2 + " is a nice colour")
+#code to ask your favourite colour and then respond accordingly
