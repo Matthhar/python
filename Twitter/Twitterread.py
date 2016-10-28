@@ -26,5 +26,5 @@ print row[2]
 
 timestamp = datetime.datetime.utcnow()
 
-response = api.PostUpdate("Tweeted at " + str(timestamp) + " most recent page is " + row[2])
+response = api.PostUpdate("Tweeted at " + str(timestamp) + " most recent page in history is " + row[2])
 print ("Status updated to: " + response.text)
