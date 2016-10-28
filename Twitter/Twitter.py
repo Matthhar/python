@@ -1,11 +1,11 @@
-import Twitter
+import twitter
 
 user = 15439395
 
 file = open("/Users/htmatthews/Documents/python/Twitter/Twittercredentials.txt")
 creds = file.read().split('\n')
 
-api = Twitter.Api(creds[0],creds[1],creds[2],creds[3])
+api = twitter.Api(creds[0],creds[1],creds[2],creds[3])
 
 statuses = api.GetUserTimeline(user)
 
