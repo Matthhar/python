@@ -14,14 +14,17 @@ api = twitter.Api(creds[0],creds[1],creds[2],creds[3])
 
 console = sqlite3.connect("/Users/htmatthews/Library/Application Support/Google/Chrome/Default/History")
 cursor = console.cursor()
-CREATE TABLE history
-cursor.execute("SELECT * FROM history")
+cursor.execute("SELECT * FROM urls")
 rows = cursor.fetchall()
-for row in rows: print row
 console.close()
 
+#print rows[len(rows)-1]
 
-#timestamp = datetime.datetime.utcnow()
+row = rows[len(rows)-1]
 
-#response = api.PostUpdate("Tweeted at " + str(timestamp))
-#print ("Status updated to: " + response.text)
+print row[2]
+
+timestamp = datetime.datetime.utcnow()
+
+response = api.PostUpdate("Tweeted at " + str(timestamp) + " most recent page is " + row[2])
+print ("Status updated to: " + response.text)
